@@ -40,6 +40,7 @@ public class Application
         Movie movieBeanRegistry = beanDefinitionRegistry.getBean("movie", Movie.class);
         System.out.println("\n"+movieBeanRegistry.getActor().toString()+"\n");
         System.out.println("hi hello this is just to try out");
+        System.out.println("hello");
 
     }
 
