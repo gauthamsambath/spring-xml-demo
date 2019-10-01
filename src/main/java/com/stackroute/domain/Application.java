@@ -42,6 +42,7 @@ public class Application
         System.out.println("hi hello this is just to try out");
         System.out.println("hello");
         System.out.println("hello again again");
+        System.out.println("hello hi hello");
 
     }
 
