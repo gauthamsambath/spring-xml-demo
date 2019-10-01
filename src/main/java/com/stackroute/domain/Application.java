@@ -23,27 +23,25 @@ public class Application
     {
         System.out.println("\n"+"using Application context"+"\n");
         ApplicationContext applicationContext= new ClassPathXmlApplicationContext("beans.xml");
-        Movie movie= (Movie) applicationContext.getBean("movie");
+        Movie movie= (Movie) applicationContext.getBean("movie1");
         System.out.println("\n"+movie.getActor().toString()+"\n");
-        System.out.println("\n"+"Using FileSystemXmlApplicationContext "+"\n");
-        ApplicationContext applicationContext1=new FileSystemXmlApplicationContext("src/main/resources/beans.xml");
-        Movie movie1= (Movie) applicationContext1.getBean("movie");
-        System.out.println("\n"+ movie1.getActor().toString()+"\n");
-        System.out.println("\n"+"Using XML bean factory"+"\n");
-        XmlBeanFactory xmlBeanFactory = new XmlBeanFactory (new ClassPathResource("beans.xml"));
-        Movie movie2= (Movie) xmlBeanFactory.getBean("movie");
-        System.out.println("\n"+movie2.getActor().toString()+"\n");
-        System.out.println("\n"+"Using BeanDefinitionRegistry and BeanDefinitionReader "+"\n");
-        DefaultListableBeanFactory beanDefinitionRegistry = new DefaultListableBeanFactory();
-        BeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(beanDefinitionRegistry);
-        beanDefinitionReader.loadBeanDefinitions(new FileSystemResource("src/main/resources/beans.xml"));
-        Movie movieBeanRegistry = beanDefinitionRegistry.getBean("movie", Movie.class);
-        System.out.println("\n"+movieBeanRegistry.getActor().toString()+"\n");
-        System.out.println("hi hello this is just to try out");
-        System.out.println("hello");
-        System.out.println("hello again again");
-        System.out.println("hello hi hello");
-
+//        ApplicationContext applicationContext1= new ClassPathXmlApplicationContext("beans.xml");
+        Movie movie1= (Movie) applicationContext.getBean("movie1");
+        System.out.println("\n"+movie1.getActor().toString()+"\n");
+        System.out.println("Checking if both are the same objects with scope:prototype");
+        System.out.println(movie1==movie);
+        Movie movie2= (Movie) applicationContext.getBean("movie");
+        System.out.println("\n"+movie.getActor().toString()+"\n");
+//        ApplicationContext applicationContext1= new ClassPathXmlApplicationContext("beans.xml");
+        Movie movie3= (Movie) applicationContext.getBean("movie");
+        System.out.println("\n"+movie1.getActor().toString()+"\n");
+        System.out.println("Checking if both are the same objects with scope:singleton");
+        System.out.println(movie2==movie3);
+        System.out.println("\n Demonstration of multiple ids 'movieA' and 'movieB' in the same movie bean \n");
+        Movie movie4= (Movie) applicationContext.getBean("movieA");
+        System.out.println("\n"+movie4.getActor().toString()+"\n");
+        Movie movie5= (Movie) applicationContext.getBean("movieB");
+        System.out.println("\n"+movie5.getActor().toString()+"\n");
     }
 
 }

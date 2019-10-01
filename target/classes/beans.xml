@@ -10,13 +10,36 @@
 
 
 
-    <bean id="actorObject" class="com.stackroute.domain.Actor">
-        <property name="name" value="tovino"></property>
-        <property name="gender" value="male"></property>
-        <property name="age" value="30"></property>
+    <bean id="actorObject1" class="com.stackroute.domain.Actor">
+        <constructor-arg value="Lalettan" ></constructor-arg>
+        <constructor-arg value="Male"></constructor-arg>
+        <constructor-arg value="55" type="int"></constructor-arg>
     </bean>
-    <bean name="movie" class="com.stackroute.domain.Movie">
-        <property name="actor" ref="actorObject"></property>
+    <bean id="actorObject2" class="com.stackroute.domain.Actor">
+        <constructor-arg value="Mamooty" ></constructor-arg>
+        <constructor-arg value="Male"></constructor-arg>
+        <constructor-arg value="65" type="int"></constructor-arg>
     </bean>
+    <bean id="actorObject3" class="com.stackroute.domain.Actor">
+        <constructor-arg value="Unni mukundan" ></constructor-arg>
+        <constructor-arg value="Male"></constructor-arg>
+        <constructor-arg value="32" type="int"></constructor-arg>
+    </bean>
+    <bean name="movie" class="com.stackroute.domain.Movie" scope = "singleton">
+        <constructor-arg>
+            <ref bean="actorObject1"></ref>
+        </constructor-arg>
+    </bean>
+    <bean name="movie1" class="com.stackroute.domain.Movie" scope="prototype">
+        <constructor-arg>
+            <ref bean="actorObject2"></ref>
+        </constructor-arg>
+    </bean>
+    <bean name="movieA,movieB" class="com.stackroute.domain.Movie" scope="prototype">
+        <constructor-arg>
+            <ref bean="actorObject3"></ref>
+        </constructor-arg>
+    </bean>
+
 
 </beans>
