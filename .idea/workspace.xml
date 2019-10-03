@@ -30,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="constructor-injection-branch" />
+        <entry key="$PROJECT_DIR$" value="autowire-xml-branch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -122,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569925641217</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="autowire-xml-branch">
+      <created>1570050614548</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1570050614549</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -142,6 +149,7 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="just to try it" />
     <MESSAGE value="third try" />
-    <option name="LAST_COMMIT_MESSAGE" value="third try" />
+    <MESSAGE value="autowire-xml-branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="autowire-xml-branch" />
   </component>
 </project>

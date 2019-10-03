@@ -24,8 +24,7 @@ public class Application
 //            {
 //                System.out.println(e.toString());
 //            }
-        Movie movie1=(Movie) applicationContext.getBean("movie1");
-        System.out.println("\n"+movie1.getActorObject1().toString()+"\n");
+
 
 
     }

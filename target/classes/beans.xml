@@ -21,7 +21,6 @@
         <constructor-arg value="55" type="int"></constructor-arg>
     </bean>
     <bean id="movie" class="com.stackroute.domain.Movie"  autowire="byName"/>
-   <bean id="movie1" class="com.stackroute.domain.Movie"  autowire="constructor"/>
 
 
 </beans>
