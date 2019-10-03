@@ -18,6 +18,7 @@ public class Application
 //        System.out.println("\n"+movie.getActorObject1().toString()+"\n");
         ((AbstractApplicationContext)applicationContext).registerShutdownHook();
         BeanLifeCycleDemo beanLifeCycleDemo= (BeanLifeCycleDemo) applicationContext.getBean("beanlifecycledemo");
+        BeanPostProcessorDemoBean beanPostProcessorDemoBean= (BeanPostProcessorDemoBean) applicationContext.getBean("beanpostprocessordemo");
 
 
     }
