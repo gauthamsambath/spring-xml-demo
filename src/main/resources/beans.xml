@@ -6,21 +6,23 @@
         http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
         http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd"
+        default-init-method="customInit"
+        default-destroy-method="customDestroy">
 
 
 
-    <bean id="actorObject1" class="com.stackroute.domain.Actor">
-        <constructor-arg value="Lalettan" ></constructor-arg>
-        <constructor-arg value="Male"></constructor-arg>
-        <constructor-arg value="55" type="int"></constructor-arg>
-    </bean>
-    <bean id="actorObject2" class="com.stackroute.domain.Actor">
-        <constructor-arg value="Lalettan" ></constructor-arg>
-        <constructor-arg value="Male"></constructor-arg>
-        <constructor-arg value="55" type="int"></constructor-arg>
-    </bean>
-    <bean id="movie" class="com.stackroute.domain.Movie"  autowire="byName"/>
-
+<!--    <bean id="actorObject1" class="com.stackroute.domain.Actor">-->
+<!--        <constructor-arg value="Lalettan" ></constructor-arg>-->
+<!--        <constructor-arg value="Male"></constructor-arg>-->
+<!--        <constructor-arg value="55" type="int"></constructor-arg>-->
+<!--    </bean>-->
+<!--    <bean id="actorObject2" class="com.stackroute.domain.Actor">-->
+<!--        <constructor-arg value="Lalettan" ></constructor-arg>-->
+<!--        <constructor-arg value="Male"></constructor-arg>-->
+<!--        <constructor-arg value="55" type="int"></constructor-arg>-->
+<!--    </bean>-->
+<!--    <bean id="movie" class="com.stackroute.domain.Movie"  autowire="byName" lazy-init="true"/>-->
+    <bean id="beanlifecycledemo" class="com.stackroute.domain.BeanLifeCycleDemo" />
 
 </beans>
